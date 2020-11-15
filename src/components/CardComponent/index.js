@@ -19,7 +19,7 @@ const CardComponent = ({
     component={Card}
     className={cx(classes.card, className)}>
     <CardContent>
-      <Typography color="textSecondary" gutterBottom>
+      <Typography color="primary" gutterBottom>
         {cardTitle}
       </Typography>
       <Typography variant="h5" component="h2">

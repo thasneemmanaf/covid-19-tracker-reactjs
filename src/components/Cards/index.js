@@ -10,10 +10,14 @@ function Cards({ data: { confirmed, recovered, deaths, lastUpdate } }) {
 
   return (
     <div className={classes.container}>
-      <Typography gutterBottom variant="h4" component="h2">
-        Global
+      <Typography gutterBottom color="primary" variant="h4" component="h2">
+        Worldwide
       </Typography>
-      <Grid container spacing={3} justify="center">
+      <Grid
+        container
+        className={classes.grid_container}
+        spacing={3}
+        justify="center">
         <CardComponent
           className={classes.infected}
           cardTitle="Infected"

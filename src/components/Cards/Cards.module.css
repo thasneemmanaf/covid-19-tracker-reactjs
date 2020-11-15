@@ -5,14 +5,17 @@
   margin: 50px 0;
 }
 
+.grid_container {
+  margin-top: 10px !important;
+}
 .infected {
-  border-bottom: 10px solid rgba(0, 0, 255, 0.5);
+  border-bottom: 20px solid rgb(255, 230, 0);
 }
 
 .recovered {
-  border-bottom: 10px solid rgba(0, 255, 0, 0.5);
+  border-bottom: 20px solid rgba(0, 255, 0, 0.979);
 }
 
 .deaths {
-  border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+  border-bottom: 20px solid rgb(255, 0, 0);
 }
