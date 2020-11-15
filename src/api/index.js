@@ -1,10 +1,12 @@
 import axios from 'axios';
 
+// API to get global COVID-19 cases
 const url = 'https://covid19.mathdro.id/api';
 
 export const fetchData = async (country) => {
   let modifiedUrl = url;
 
+  // API to get country specific COVID-19 cases
   if (country) {
     modifiedUrl = `${url}/countries/${country}`;
   }
@@ -38,6 +40,7 @@ export const fetchDailyData = async () => {
   }
 };
 
+// To get list of countries
 export const fetchCountries = async () => {
   try {
     const {

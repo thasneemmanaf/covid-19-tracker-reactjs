@@ -9,12 +9,12 @@ function App() {
   const [data, setData] = useState({});
   const [country, setCountry] = useState('');
 
+  // API to fetch total global COVID-19 cases
   useEffect(() => {
     try {
       const fetchDataApi = async () => {
         const response = await fetchData();
         setData(response);
-        console.log(response);
       };
       fetchDataApi();
     } catch (err) {
@@ -22,10 +22,18 @@ function App() {
     }
   }, []);
 
+  const handleCountryChange = async (selectedCountry) => {
+    const fetchedData = await fetchData(selectedCountry);
+
+    setData(fetchedData);
+    setCountry(selectedCountry);
+    console.log(selectedCountry);
+  };
+
   return (
     <div className={classes.container}>
       <Cards data={data} />
-      <CountryPicker />
+      <CountryPicker handleCountryChange={handleCountryChange} />
       <Chart data={data} country={country} />
     </div>
   );

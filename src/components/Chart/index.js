@@ -41,6 +41,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
     />
   ) : null;
 
+  // Line chart is available only for US due to API limitation
   const lineChart = dailyData[0] ? (
     <Line
       data={{
