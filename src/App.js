@@ -14,6 +14,7 @@ function App() {
       const fetchDataApi = async () => {
         const response = await fetchData();
         setData(response);
+        console.log(response);
       };
       fetchDataApi();
     } catch (err) {
@@ -25,7 +26,7 @@ function App() {
     <div className={classes.container}>
       <Cards data={data} />
       <CountryPicker />
-      <Chart />
+      <Chart data={data} country={country} />
     </div>
   );
 }
